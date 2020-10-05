@@ -1,0 +1,26 @@
+
+<form #userform="ngForm">
+  {{userform.value |json}}
+
+<hello name="{{ name }}"></hello>
+<label>UserName:</label>
+<input type="text" ngModel name="Firstname">
+<br>
+<br>
+<label>Email:</label>
+<input type="text" ngModel name="email">
+
+<div class="form-group">
+  <select class="custom-select" ngModel>
+    <option selected>I am intrested in android</option>
+    <option *ngFor="let device of devices">{{device}}</option>
+  </select>
+</div>
+<div class="form-check">
+  <input class="form-check-input" ngModel type="radio" name="time preference" value="morning"> 
+  <label class="formchecklabel">morning(9Am-6Am)</label>
+  <br>
+  <br>
+  <input class="form-check-input" ngModel type="radio" name="time preference" value="evening"> 
+  <label class="formchecklabel">morning(9Am-6Am)</label>
+
